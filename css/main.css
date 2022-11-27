@@ -1,0 +1,100 @@
+*{
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body { 
+    font-size: 16px;
+    background-color: rgb(91, 90, 90);
+    background-image:url('../images/novel.jpg');
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+header > h1 { text-align: center; padding: 8px; }
+
+header { 
+    background-color: grey; 
+    position: sticky; 
+    top: 0;
+  }
+  
+
+article { 
+    width: 25%; 
+    border: 4px solid white; 
+    border-radius: 8px; 
+
+    display: inline-block;
+    margin: 10px 12px;
+
+    text-align: left;
+}
+
+main { text-align: center; }
+
+article > h2 { color: blue;  padding: 4px 8px; }
+
+article:first-of-type { border: 4px solid blue; }
+
+#inprogress { border: 4px solid red; }
+#inprogress h2 { color: red; }
+
+#done { border: 4px solid green; }
+#done h2 { color: green; }
+
+ul { list-style-type: none; }
+
+ul li { padding: 6px 8px; text-transform: auto; }
+
+.todo li:nth-child(odd) { background-color: rgba(0, 0, 255, 0.5)}
+
+.inprogress li:nth-child(odd) { background-color: rgba(255, 0, 0, 0.5)}
+
+.done li:nth-child(odd) { background-color: rgba(0, 255, 0, 0.5)}
+
+
+input[type="checkbox"] 
+{ margin-right: 8px; 
+align-items: flex-end;
+}
+
+
+input[type="checkbox"]:checked + span::after 
+{
+  content:  attr(href) "Successful!";
+    text-decoration: underline;
+    color: #1c4cdc;
+}
+
+
+.inprogress {
+    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.inprogress:active {
+    box-shadow: 2px 2px 5px #fc894d;
+}
+
+.done {
+  background-image: linear-gradient(135deg, #38c731 40%, #4dfcc7);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.done:active {
+  box-shadow: 2px 2px 5px #4dfc79;
+}
